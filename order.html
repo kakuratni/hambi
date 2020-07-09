@@ -46,18 +46,14 @@
         <div class="col-4">
             <form>
                 <div class="form-group">
-                    <label for="exampleFormControlSelect1">Example select</label>
-                    <select class="form-control" id="exampleFormControlSelect1">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
+                    <label for="top-input">Topping</label>
+                    <input type="number" name="top-input" class="form-control">
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1">
+                    <label for="amount-input">Quantity</label>
+                    <input type="number" name="amount-input" class="form-control">
+                    </select>
                 </div>
                 <div class="form-group form-check">
                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -68,11 +64,12 @@
                     <label class="form-check-label" for="defaultCheck1">
                         Default checkbox
                     </label>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="button" onclick="calcamount()" class="btn btn-primary">Submit</button>
                 </div>
             </form>
             <div class="col-4"></div>
         </div>
+        <script src="main.js"></script>
 </body>
 
 </html>
