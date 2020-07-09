@@ -7,7 +7,7 @@ function calcAmount() {
     showSumPrice(price, amountNumber)
 }
 
-function showSumPrice(price, amountNumber) {
+function showSumPrice(price = 1000, amountNumber = 1) {
     amountNumber = amountNumber || 0;
     let showAmount = document.querySelector("span.show-amount");
     if (amountNumber > 10) {
