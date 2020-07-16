@@ -9,3 +9,8 @@ Készíts egy időjárás widgetet a hamburgerező weboldalának tetejére! A wi
 3 Írj egy olyan függvényt, amely kiolvassa a legördülő listából a kiválasztott értéket, és ez alapján megjeleníti az adott napi hőmérsékletet! Ahhoz, hogy működjön, a gomb lenyomására futtasd le a függvényt! A gombban állítsd be az onclick attribútum értékének a függvényed nevét zárójelekkel! (Például ha a függvényed neve weatherWidget, akkor a HTML fájlba a gombba ez kerül: onclick="weatherWidget()".)
 4 Formázd meg a widgetet, hogy megjelenésében illeszkedjen az oldalhoz!
 5 Illeszd be az elkészült widgetet az összes oldal tetejére!
+
+
+1 Vegyél fel a contact.html fájlban három új bekezdést a widgetbe, amelyekben megjelenítheted a hőmérsékleti statisztikákat.
+2  A JavaScript fájlban a három számítást három külön függvényben készítsd el, majd a megjelenítésnél ezeket a függvényeket hívd meg!
+3   A másik három oldalon is módosítsd a widgetet!

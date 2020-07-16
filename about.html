@@ -45,7 +45,24 @@
             </form>
         </div>
     </nav>
-
+    <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4 bg-light">
+            <label for="day">Day of the week:</label>
+            <select id="day" onload="weatherWidget()">
+                <option value="0">Monday</option>
+                <option value="1">Tuesday</option>
+                <option value="2">Wednesday</option>
+                <option value="3">Thursday</option>
+                <option value="4">Friday</option>
+                <option value="5">Saturday</option>
+                <option value="6">Sunday</option>
+            </select>
+            <div class="btn btn-primary btn-sm" type="submit" onclick="weatherWidget()">Show</div>
+            <span id="temp">&degC</span>
+        </div>
+        <div class="col-sm-4"></div>
+    </div>
     <div class="row">
         <div class="col-sm-4">
         </div>
@@ -105,7 +122,9 @@
     integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
     crossorigin=""></script>
 -->
-
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="main.js"></script>
 </body>
 
 </html>
