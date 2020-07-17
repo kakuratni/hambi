@@ -41,20 +41,22 @@
             </form>
         </div>
     </nav>
-    <div class="row">
-        <div class="col-sm-12 bg-light">
-            <label for="day">Day of the week:</label>
-            <select id="day" onchange="weatherWidget()">
-                <option value="0">Sunday</option>
-                <option value="1">Monday</option>
-                <option value="2">Tuesday</option>
-                <option value="3">Wednesday</option>
-                <option value="4">Thursday</option>
-                <option value="5">Friday</option>
-                <option value="6">Saturday</option>
-            </select>
-            <div class="btn btn-primary btn-sm" type="submit" onclick="weatherWidget()">Show</div>
-            <span id="temp">&degC</span>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 bg-light">
+                <label for="day">Day of the week:</label>
+                <select id="day" onchange="weatherWidget()">
+                    <option value="0">Sunday</option>
+                    <option value="1">Monday</option>
+                    <option value="2">Tuesday</option>
+                    <option value="3">Wednesday</option>
+                    <option value="4">Thursday</option>
+                    <option value="5">Friday</option>
+                    <option value="6">Saturday</option>
+                </select>
+                <div class="btn btn-primary btn-sm" type="submit" onclick="weatherWidget()">Show</div>
+                <span id="temp">&degC</span>
+            </div>
         </div>
     </div>
 
