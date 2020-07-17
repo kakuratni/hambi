@@ -60,47 +60,61 @@
         </div>
     </div>
 
-
-    <div class="row">
-        <div class="col-sm-4">
-        </div>
-        <div class="col-sm-4">
-            <h1>Hambi Bambi</h1>
-            <p>Get on the bandwagon with: "The Hamburger Train"</p>
-            <div class="modal-body">
-
-                <iframe src="https://www.youtube.com/embed/ZdhfPwRreCY" frameborder="0"
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4" id="minimumtemperature" onload="setMinTemp()">
+                Minimum temperature this week: &degC
             </div>
-            <img src="img/burger-1502451_1920.jpg" alt="burger" class="img-thumbnail">
-            <h2>
-                Fantastic burger
-            </h2>
-            <ul>
-                <li>Meat lover</li>
-                <ul>
-                    <li>Beef</li>
-                    <li>Pork</li>
-                    <li>Chicken</li>
-                    <li>Turkey</li>
-                </ul>
-                <li>Vegetarian</li>
-                <li>Piedone</li>
-            </ul>
-            <h2>Steps of order</h2>
-            <ol>
-                <li>Choose a burger</li>
-                <li>Tell us your address</li>
-                <li>Order it</li>
-                <li>Enjoy!</li>
-            </ol>
-            <a target="blank" href="order.html">
-                <img width="100px" src="img/burger-1396648_1280.png" alt="order a burger">
-            </a>
+            <div class="col-sm-4" id="averagetemperature" onload="setMaxTemp()">
+                Average temperature this week: &degC
+            </div>
+            <div class="col-sm-4" id="maximumtemperature" onload="setAvgTemp()">
+                Maximum temperature this week: &degC
+            </div>
         </div>
-        <div class="col-sm-4">
+    </div>
 
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+            </div>
+            <div class="col-sm-4">
+                <h1>Hambi Bambi</h1>
+                <p>Get on the bandwagon with: "The Hamburger Train"</p>
+                <div class="modal-body">
+
+                    <iframe src="https://www.youtube.com/embed/ZdhfPwRreCY" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <img src="img/burger-1502451_1920.jpg" alt="burger" class="img-thumbnail">
+                <h2>
+                    Fantastic burger
+                </h2>
+                <ul>
+                    <li>Meat lover</li>
+                    <ul>
+                        <li>Beef</li>
+                        <li>Pork</li>
+                        <li>Chicken</li>
+                        <li>Turkey</li>
+                    </ul>
+                    <li>Vegetarian</li>
+                    <li>Piedone</li>
+                </ul>
+                <h2>Steps of order</h2>
+                <ol>
+                    <li>Choose a burger</li>
+                    <li>Tell us your address</li>
+                    <li>Order it</li>
+                    <li>Enjoy!</li>
+                </ol>
+                <a target="blank" href="order.html">
+                    <img width="100px" src="img/burger-1396648_1280.png" alt="order a burger">
+                </a>
+            </div>
+            <div class="col-sm-4">
+            </div>
         </div>
     </div>
     <script src="js/jquery.min.js"></script>
