@@ -46,7 +46,9 @@
         <div class="col-sm-4 text-center"></div>
         <div class="col-sm-4 text-center">
             <label for="day">Day of the week:</label>
-            <select id="day" onchange="weatherWidget()">
+            <select id="day" 
+            <!--onchange="weatherWidget()"-->
+            >
                 <option value="0">Sunday</option>
                 <option value="1">Monday</option>
                 <option value="2">Tuesday</option>
@@ -55,10 +57,13 @@
                 <option value="5">Friday</option>
                 <option value="6">Saturday</option>
             </select>
-            <div class="btn btn-primary btn-sm" type="submit" onclick="weatherWidget()">Show</div>
+            <div class="btn btn-primary btn-sm" type="submit" onclick="weatherWidget(), showOffer()">Show</div>
             <span id="temp">&degC</span>
         </div>
-        <div class="col-sm-4 text-center"></div>
+        <div class="col-sm-4 text-center">
+        <p id="offer"></p>
+
+        </div>
     </div>
 
     <div class="row">
@@ -119,6 +124,7 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="main.js"></script>
+    <script src="test.js"></script>
 </body>
 
 </html>
