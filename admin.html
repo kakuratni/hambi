@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hambi Bambi</title>
     <link rel="stylesheet" href="style/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style/style.css">
 
 </head>
 
@@ -54,13 +55,32 @@
                         <tr>
                             <th>ID</th>
                             <th>First Name</th>
-                            <th>Second Dame</th>
+                            <th>Second Name</th>
                             <th>Email</th>
                             <th>Address</th>
                             <th>Modify/Delete</th>
                         </tr>
                     </thead>
                     <tbody>
+                        <tr>
+                            <form id="newEntry" action="">
+                                <td><input type="text" name="identifier" class="form-control" id="identifier"
+                                        aria-describedby="second-name" placeholder="ID"></td>
+                                <td><input type="text" name="first-name" class="form-control" id="first-name"
+                                        aria-describedby="second-name" placeholder="First name"></td>
+                                <td><input type="text" name="second-name" class="form-control" id="second-name"
+                                        aria-describedby="second-name" placeholder="Second name"></td>
+                                <td><input type="email" name="email" class="form-control" id="email"
+                                        placeholder="your@email.address"></td>
+                                <td><input type="text" name="address" class="form-control" id="address"
+                                        placeholder="Address"></td>
+                                <td>
+                                    <div class="btn-group">
+                                        <button type="submit" class="btn-primary btn">Add new</button>
+                                    </div>
+                                </td>
+                            </form>
+                        </tr>
                         <tr>
                             <td>007</td>
                             <td>James</td>

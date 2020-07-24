@@ -76,14 +76,6 @@ let weatherData = {
     ]
 };
 
-for (var i = 0; i < deleteButton.length; i++) {
-    deleteButton[i].addEventListener('click', function(event) {
-        if (!confirm("sure u want to delete " + this.title)) {
-            event.preventDefault();
-        }
-    });
-}
-
 function weatherWidget() {
     let day = document.querySelector("#day").value;
     let tempDiv = document.querySelector("#temp");

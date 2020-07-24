@@ -19,11 +19,26 @@ let adminData = {
     }
 };
 
+
+
 let newRow = document.createElement("tr");
 
-let parent = document.querySelector("table.table").lastElementChild.lastElementChild;
+let parent = document.querySelector("table.table").lastElementChild;
 
 parent.appendChild(newRow)
+
+let newEntry = document.querySelector("#newEntry")
+newEntry.addEventListener("submit", function(ev) {
+    ev.preventDefault();
+    console.log(this);
+    let inputs = this.querySelectorAll("input"); 
+    let values = {};
+    for (let i = 0; i < inputs; i++) {
+        values[inputs[i].name] = inputs[i].value;
+    }
+    console.log(values);
+});
+
 /*
 let temps = [25, 35, 0, 3, 85, 19, -2];
 
@@ -49,7 +64,6 @@ modifyButton.onclick = function () {
 }
  */
 let modifyButton = document.querySelectorAll("table .btn.btn-info");
-
 for (var i = 0; i < modifyButton.length; i++) {
     modifyButton[i].addEventListener('click', function(event) {
         if (!confirm("sure u want to modify " + this.title)) {
@@ -59,3 +73,10 @@ for (var i = 0; i < modifyButton.length; i++) {
 }
 
 let deleteButton = document.querySelectorAll("table .btn.btn-danger");
+for (var i = 0; i < deleteButton.length; i++) {
+    deleteButton[i].addEventListener('click', function(event) {
+        if (!confirm("sure u want to delete " + this.title)) {
+            event.preventDefault();
+        }
+    });
+}
