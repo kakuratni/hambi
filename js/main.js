@@ -5,7 +5,7 @@ function calcAmount() {
     amountNumber = isNaN(amountNumber) ? 0 : amountNumber;
 
     showSumPrice(price, amountNumber)
-}
+};
 
 function showSumPrice(price = 1000, amountNumber = 1) {
     amountNumber = amountNumber || 0;
@@ -19,7 +19,7 @@ function showSumPrice(price = 1000, amountNumber = 1) {
         showAmount.innerHTML = amount;
     }
 
-}
+};
 
 let weatherData = {
     "weathers": [
@@ -84,7 +84,7 @@ function weatherWidget() {
     let offerMessage = showOffer(temp).offerMessage;
     tempDiv.innerHTML = temp + "&degC";
     offer.innerHTML = offerMessage;
-}
+};
 
 function showOffer(temp) {
     for (let offer of weatherData.offers) {
@@ -92,7 +92,7 @@ function showOffer(temp) {
             return offer;
     }
 
-}
+};
 
 let minTemp = weatherData.weathers[0].temperature;
 let maxTemp = weatherData.weathers[0].temperature;
@@ -105,7 +105,8 @@ function setMinTemp() {
             minTemp = weatherData.weathers[i].temperature;
         }
     }
-}
+};
+
 setMinTemp();
 document.querySelector("#minimumtemperature").innerHTML = "Minimum temperature this week: " + minTemp + "&degC";
 
@@ -115,7 +116,7 @@ function setMaxTemp() {
             maxTemp = weatherData.weathers[i].temperature;
         }
     }
-}
+};
 setMaxTemp();
 document.querySelector("#maximumtemperature").innerHTML = "Maximum temperature this week: " + maxTemp + "&degC";
 
@@ -124,6 +125,6 @@ function setAvgTemp() {
         tempsSum += weatherData.weathers[i].temperature;
     }
     avgTemp = Math.round(tempsSum / Object(weatherData).weathers.length);
-}
+};
 setAvgTemp();
 document.querySelector("#averagetemperature").innerHTML = "Average temperature this week: " + avgTemp + "&degC";

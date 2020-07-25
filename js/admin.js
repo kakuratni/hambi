@@ -5,7 +5,20 @@ function massModify(selector, attribute, value) {
     }
 }
 
+fetchInit = {
+    method: "GET",
+      Headers: new Headers(),
+      mode: "cors",
+      cache: "default"
+  };
+users = fetch("http://localhost:3000/users", fetchInit).then(
+    data => data.json(),
+    err => console.error(err)
+    ).then(
+    users => users
+    );
 
+/*
 let users = [
     {
         "id": "001",
@@ -29,7 +42,7 @@ let users = [
         "address": "Győr, 9025, Knézich u. 15."
     }
 ];
-
+*/
 let table = document.querySelector("#userTable tbody");
 let createTD = (html, parent) =>  {
     let td = document.createElement("td");
