@@ -74,10 +74,16 @@ for (var i = 0; i < modifyButton.length; i++) {
 }
 
 let deleteButton = document.querySelectorAll("table .btn.btn-danger");
+let deleteLineEventHandlerFunction = function (event) {
+    if (!confirm("sure u want to delete " + this.title)) {
+        event.preventDefault();
+    } else {
+        this.parentElement.parentElement.parentElement.remove();
+    }
+
+    console.log(event);
+}
+
 for (var i = 0; i < deleteButton.length; i++) {
-    deleteButton[i].addEventListener('click', function (event) {
-        if (!confirm("sure u want to delete " + this.title)) {
-            event.preventDefault();
-        }
-    });
+    deleteButton[i].addEventListener('click', deleteLineEventHandlerFunction);
 }
