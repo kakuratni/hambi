@@ -6,26 +6,82 @@ function massModify(selector, attribute, value) {
 }
 
 
-let adminData = {
-    "i007": {
-        "name": "valaki",
+let users = [
+    {
+        "id": "001",
+        "first-name": "valaki",
+        "last-name": "mas",
         "email": "sdfsfd@dsadf.com",
         "address": "piripocs"
     },
-    "i008": {
-        "name": "valako",
-        "email": "sdfd@dsadf.com",
+    {       
+        "id": "002",
+        "first-name": "kelep",
+        "last-name": "masmari",
+        "email": "sdfd@dsa.com",
         "address": "pirips"
+    },
+    {       
+        "id": "007",
+        "first-name": "James",
+        "last-name": "Bond",
+        "email": "007.jb@secretagent.com",
+        "address": "Győr, 9025, Knézich u. 15."
     }
-};
+];
+
+let table = document.querySelector("#userTable tbody");
+let createTD = (html, parent) =>  {
+    let td = document.createElement("td");
+    td.innerHTML = html;
+    parent.appendChild(td);
+}
+
+let createButtonGroup = parent => { 
+    let group = document.createElement("div");
+    group.className = "btn-group";
+    let btnInfo = document.createElement("button");
+    btnInfo.className = "btn-info btn";
+    btnInfo.innerHTML = "Modify";
+    let btnDanger = document.createElement("button");
+    btnDanger.className = "btn-danger btn";
+    btnDanger.innerHTML = "Delete";
+    group.appendChild(btnInfo);
+    group.appendChild(btnDanger);
+    let td = document.createElement("td");
+    td.appendChild(group);
+    parent.appendChild(td);
+}
+
+for ( let k in users ) { 
+  let tr = document.createElement("tr");
+  //to add numbering uncomment this
+  //createTD(parseInt(k)+1, tr);
+  for ( let data of Object.values(users[k]) ) {
+      createTD(data, tr);
+/*     let td = document.createElement("td");
+    td.innerHTML = data;
+    tr.appendChild(td); */
+  }
+  createButtonGroup(tr);
+  table.appendChild(tr);
+}
 
 
 
-let newRow = document.createElement("tr");
+ 
+/* let newRow = document.createElement("tr");
 
 let parent = document.querySelector("table.table").lastElementChild;
 
 parent.appendChild(newRow)
+
+parent = document.querySelector("table.table").lastElementChild;
+for (let i = 0, i < users.) {
+    parent.appendChild(users[i].value)
+}
+
+ */
 
 
 let newEntries = document.querySelector("#newEntry");
