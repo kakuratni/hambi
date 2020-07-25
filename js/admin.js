@@ -7,12 +7,12 @@ function massModify(selector, attribute, value) {
 
 
 let adminData = {
-    "i007":   {
+    "i007": {
         "name": "valaki",
         "email": "sdfsfd@dsadf.com",
         "address": "piripocs"
     },
-    "i008":   {
+    "i008": {
         "name": "valako",
         "email": "sdfd@dsadf.com",
         "address": "pirips"
@@ -27,16 +27,17 @@ let parent = document.querySelector("table.table").lastElementChild;
 
 parent.appendChild(newRow)
 
+
 let newEntries = document.querySelector("#newEntry");
 newEntries.addEventListener("submit", function(ev) {
     ev.preventDefault();
-    console.log( this )
-    let inputs = this.querySelectorAll("input"); 
+    console.log(this)
+    let inputs = this.querySelectorAll("input");
     let values = {};
-    for (let i = 0; i < inputs.lenght; i++) {
+    for (let i = 0; i < inputs.length; i++) {
         values[inputs[i].name] = inputs[i].value;
-    }
-    console.log( values );
+    };
+    console.log(values);
 });
 
 /*
@@ -65,7 +66,7 @@ modifyButton.onclick = function () {
  */
 let modifyButton = document.querySelectorAll("table .btn.btn-info");
 for (var i = 0; i < modifyButton.length; i++) {
-    modifyButton[i].addEventListener('click', function(event) {
+    modifyButton[i].addEventListener('click', function (event) {
         if (!confirm("sure u want to modify " + this.title)) {
             event.preventDefault();
         }
@@ -74,7 +75,7 @@ for (var i = 0; i < modifyButton.length; i++) {
 
 let deleteButton = document.querySelectorAll("table .btn.btn-danger");
 for (var i = 0; i < deleteButton.length; i++) {
-    deleteButton[i].addEventListener('click', function(event) {
+    deleteButton[i].addEventListener('click', function (event) {
         if (!confirm("sure u want to delete " + this.title)) {
             event.preventDefault();
         }
