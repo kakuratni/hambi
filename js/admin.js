@@ -27,16 +27,16 @@ let parent = document.querySelector("table.table").lastElementChild;
 
 parent.appendChild(newRow)
 
-let newEntry = document.querySelector("#newEntry")
-newEntry.addEventListener("submit", function(ev) {
+let newEntries = document.querySelector("#newEntry");
+newEntries.addEventListener("submit", function(ev) {
     ev.preventDefault();
-    console.log(this);
+    console.log( this )
     let inputs = this.querySelectorAll("input"); 
     let values = {};
-    for (let i = 0; i < inputs; i++) {
+    for (let i = 0; i < inputs.lenght; i++) {
         values[inputs[i].name] = inputs[i].value;
     }
-    console.log(values);
+    console.log( values );
 });
 
 /*
